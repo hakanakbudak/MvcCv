@@ -1,0 +1,26 @@
+﻿@model MvcCv.DAL.Entities.TblSertifikalarım
+
+@{
+    ViewData["Title"] = "YetenekGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h4>Sertifika Güncelleme</h4>
+<br />
+
+<form method="post">
+
+    <input type="hidden" asp-for="ID" />
+    <br />
+    <input type="text" asp-for="Aciklama" class="form-control" placeholder="Serifika Açıklaması" />
+    <br />
+    <input type="text" asp-for="Tarih" class="form-control" placeholder="Serifika Edinme Tarihi" />
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+    <a href="/Sertifika/SertifikaSil/@ViewBag.d" class="btn btn-danger">Sil</a>
+
+</form>
+

@@ -1,0 +1,30 @@
+﻿@model MvcCv.DAL.Entities.Tbliletisim
+
+<section class="resume-section" id="contact">
+	<div class="resume-section-content">
+
+		<h2 class="mb-5">İletişim</h2>
+
+		<form asp-controller="Default" asp-action="SendMessage" method="post">
+			<div class="form-group">
+				<label>Ad Soyad</label>
+				<input asp-for="AdSoyad" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label>Mail</label>
+				<input asp-for="Mail" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label>Konu</label>
+				<input asp-for="Konu" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label>Mesaj</label>
+				<textarea asp-for="Mesaj" class="form-control"></textarea>
+			</div>
+			<br/>
+			<button type="submit" class="btn btn-primary">Mesaj Gönder</button>
+		</form>
+
+	</div>
+</section>

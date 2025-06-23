@@ -1,0 +1,28 @@
+﻿@using MvcCv.DAL.Entities
+@model List<TblHakkimda>
+
+
+<section class="resume-section" id="about">
+	<div class="resume-section-content">
+
+
+		@foreach (var item in Model)
+		{
+			<h1 class="mb-0">
+				@item.Ad
+				<span class="text-primary">@item.Soyad</span>
+			</h1>
+
+			<div class="subheading mb-5">
+				@item.Adres @item.Telefon
+				<a href="@item.Mail">@item.Mail</a>
+			</div>
+			<p class="lead mb-5">@item.Aciklama</p>
+		}
+
+		<!--SocialMedia Component Partial -->
+		@await Component.InvokeAsync("_SocialMediaComponentsPartial")
+
+		
+	</div>
+</section>

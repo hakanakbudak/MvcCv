@@ -1,0 +1,47 @@
+﻿@model List<TblHakkimda>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Hakkimda Sayfası</h2>
+<br />
+
+<form method="post">
+
+	@foreach (var item in Model)
+	{
+		<label>Ad</label>
+		<input class="form-control" type="text" name="Ad" value="@item.Ad" />
+		
+		<br />
+		<label>Soyad</label>
+		<input class="form-control" type="text" name="Soyad" value="@item.Soyad" />
+		
+		<br />
+		<label>Adres</label>
+		<input class="form-control" type="text" name="Adres" value="@item.Adres" />
+		
+		<br />
+		<label>Telefon</label>
+		<input class="form-control" type="text" name="Telefon" value="@item.Telefon" />
+		
+		<br />
+		<label>Mail</label>
+		<input class="form-control" type="text" name="Mail" value="@item.Mail" />
+		
+		<br />
+		<label>Resim</label>
+		<input class="form-control" type="text" name="Resim" value="@item.Resim" />
+		
+		<br />
+		<label>Açıklama</label>
+		<textarea class="form-control" rows="6" name="Aciklama">@item.Aciklama</textarea>
+	}
+	  
+	<br />
+	<button class="btn btn-success">Güncelle</button>
+
+</form>

@@ -1,0 +1,32 @@
+﻿@model MvcCv.DAL.Entities.TblEgitimlerim
+
+@{
+    ViewData["Title"] = "EgitimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h4>Yeni Eğitim Ekleme Sayfası</h4>
+<br />
+
+<form asp-controller="Egitim" asp-action="EgitimEkle" method="post">
+
+    <input type="text" name="Baslik" asp-for="Baslik" class="form-control" placeholder="Başlığı yazınız" />
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @class = "text-danger" })
+    <br />
+    <input type="text" asp-for="AltBaslik1" class="form-control" placeholder="Alt başlık1 yazınız" />
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @class = "text-danger" })
+    <br />
+    <input type="text" asp-for="AltBaslik2" class="form-control" placeholder="Alt başlık2 yazınız" />
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @class = "text-danger" })
+    <br />
+    <input type="text" asp-for="Gno" class="form-control" placeholder="Gno giriniz" />
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @class = "text-danger" })
+    @Html.ValidationMessageFor(x => x.Gno, "", new { @class = "text-danger" })
+    <br />
+    <input type="text" asp-for="Tarih" class="form-control" placeholder="Eğitim tarihi giriniz" />
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @class = "text-danger" })
+    <br />
+    <button type="submit" class="btn btn-info">Kaydet</button>
+</form>

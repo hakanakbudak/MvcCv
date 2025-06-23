@@ -1,0 +1,23 @@
+﻿@model MvcCv.DAL.Entities.TblYetenekler
+
+@{
+    ViewData["Title"] = "YetenekGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h4>Yetenek Güncelleme</h4>
+<br />
+
+<form method="post">
+    <input type="hidden" asp-for="ID" />
+    <br />
+    <input type="text" asp-for="Yetenek" class="form-control" placeholder="Yetenek yazınız" />
+    <br />
+    <input type="text" asp-for="Oran" class="form-control" placeholder="Oran yazınız" />
+    <br />
+   
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

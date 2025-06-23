@@ -1,0 +1,20 @@
+﻿@model MvcCv.DAL.Entities.TblYetenekler
+
+@{
+    ViewData["Title"] = "YeniYetenek";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h4>YeniYetenek Ekleme Sayfası</h4>
+<br />
+
+<form asp-controller="Yetenek" asp-action="YeniYetenek" method="post">
+
+    <input type="text" name="Yetenek" asp-for="Yetenek" class="form-control" placeholder="Yetenek yazınız" />
+    <br />
+    <input type="text" name="Oran" asp-for="Oran" class="form-control" placeholder="Oran yazınız" />
+    <br />
+    <button type="submit" class="btn btn-info">Kaydet</button>
+</form>

@@ -1,0 +1,24 @@
+﻿@model MvcCv.DAL.Entities.TblDeneyimlerim
+
+@{
+    ViewData["Title"] = "DeneyimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Deneyim Güncelleme</h4>
+<br />
+
+<form method="post">
+    <input type="hidden" asp-for="ID" />
+    <br />
+    <input type="text" asp-for="Baslik" class="form-control" placeholder="Başlığı yazınız" />
+    <br />
+    <input type="text" asp-for="AltBaslik" class="form-control" placeholder="Alt başlık yazınız" />
+    <br />
+    <input type="text" asp-for="Aciklama" class="form-control" placeholder="Açıklamanızı giriniz" />
+    <br />
+    <input type="text" asp-for="Tarih" class="form-control" placeholder="Çalışma tarihi giriniz" />
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>

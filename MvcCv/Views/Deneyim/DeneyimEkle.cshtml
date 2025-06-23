@@ -1,0 +1,24 @@
+﻿@model MvcCv.DAL.Entities.TblDeneyimlerim
+
+
+@{
+    ViewData["Title"] = "DeneyimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Yeni Deneyim Ekleme Sayfası</h4>
+<br />
+
+<form asp-controller="Deneyim" asp-action="DeneyimEkle" method="post">
+
+    <input type="text" name="Baslik" asp-for="Baslik" class="form-control" placeholder="Başlığı yazınız"/>
+    <br />
+    <input type="text" name="AltBaslik" asp-for="AltBaslik" class="form-control" placeholder="Alt başlık yazınız" />
+    <br />
+    <input type="text" name="Aciklama" asp-for="Aciklama" class="form-control" placeholder="Açıklamanızı giriniz" />
+    <br />
+    <input type="text" name="Tarih" asp-for="Tarih" class="form-control" placeholder="Çalışma tarihi giriniz"/>
+    <br />
+    <button type="submit" class="btn btn-info">Kaydet</button>
+</form>

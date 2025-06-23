@@ -1,0 +1,20 @@
+﻿@model MvcCv.DAL.Entities.TblSertifikalarım
+
+@{
+    ViewData["Title"] = "YeniYetenek";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h4>Sertifika Ekleme Sayfası</h4>
+<br />
+
+<form asp-controller="Sertifika" asp-action="SertifikaEkle" method="post">
+
+    <input type="text" name="Aciklama" asp-for="Aciklama" class="form-control" placeholder="Sertifika açıklamasını yazınız" />
+    <br />
+    <input type="text" name="Tarih" asp-for="Tarih" class="form-control" placeholder="Sertifika aldığınız tarihi yazınız" />
+    <br />
+    <button type="submit" class="btn btn-info">Kaydet</button>
+</form>

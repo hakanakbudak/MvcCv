@@ -1,0 +1,68 @@
+﻿@using MvcCv.DAL.Entities
+@model List<TblHakkimda>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadComponentPartial")
+
+<body id="page-top">
+
+    <!-- Navigation-->
+    @await Component.InvokeAsync("_NavigationComponentPartial")
+   
+
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+
+
+        <!-- About-->
+        @await Component.InvokeAsync("_AboutComponentPartial")
+        <hr class="m-0" />
+
+
+        <!-- Experience-->
+        @await Component.InvokeAsync("_ExperienceComponentPartial")
+        <hr class="m-0" />
+
+
+        <!-- Education-->
+        @await Component.InvokeAsync("_EducationComponentPartial")
+        <hr class="m-0" />
+
+
+        <!-- Skills-->
+        @await Component.InvokeAsync("_SkillsComponentPartial")
+        <hr class="m-0" />
+
+
+        <!-- Interests-->
+        @await Component.InvokeAsync("_InterestsComponentPartial")
+        <hr class="m-0" />
+
+
+        <!-- Awards-->
+        @await Component.InvokeAsync("_AwardsComponentPartial")
+        <hr class="m-0" />
+        
+        <!-- Contacts-->
+        @await Component.InvokeAsync("_ContactComponentPartial")
+      
+
+    </div>
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <!-- Core theme JS-->
+    <script src="/startbootstrap-resume-gh-pages/js/scripts.js"></script>
+
+
+</body>
+</html>

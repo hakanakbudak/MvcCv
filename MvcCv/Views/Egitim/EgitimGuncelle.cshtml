@@ -1,0 +1,29 @@
+﻿@model MvcCv.DAL.Entities.TblEgitimlerim
+
+@{
+    ViewData["Title"] = "EgitimGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Eğitim Güncelleme</h4>
+<br />
+
+<form method="post">
+
+    <input type="hidden" asp-for="ID" />
+    <br />
+    <input type="text" asp-for="Baslik" class="form-control" placeholder="Başlığı yazınız" />
+    <br />
+    <input type="text" asp-for="AltBaslik1" class="form-control" placeholder="Alt başlık1 yazınız" />
+    <br />
+    <input type="text" asp-for="AltBaslik2" class="form-control" placeholder="Alt başlık2 yazınız" />
+    <br />
+    <input type="text" asp-for="Gno" class="form-control" placeholder="Gno giriniz" />
+    <br />
+    <input type="text" asp-for="Tarih" class="form-control" placeholder="Eğitim tarihi aralığını giriniz" />
+    <br />
+
+    <button class="btn btn-info">Güncelle</button>
+
+</form>
